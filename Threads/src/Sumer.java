@@ -19,5 +19,7 @@ public class Sumer implements Callable<Integer> {
 		}
 		return sum;
 	}
+	
+	
 
 }
