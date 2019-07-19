@@ -41,17 +41,17 @@ public class OrderClient {
 		
 		Item i1 = new Item();
 		i1.setProduct(p1);
-		i1.setQty(1);
+		i1.setQty(10);
 		i1.setAmount(p1.getPrice());
 		
 		
 		Item i2 = new Item();
 		i2.setProduct(p2);
-		i2.setQty(2);
+		i2.setQty(20);
 		i2.setAmount(p2.getPrice());
 		
 		o.getItems().add(i1);
-		//o.getItems().add(i2);
+		o.getItems().add(i2);
 		service.executeOrder(o);
 		
 		

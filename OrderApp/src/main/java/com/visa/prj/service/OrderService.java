@@ -32,7 +32,7 @@ public class OrderService {
 		double total = 0.0;
 		for (Item i: items) {
 			total += i.getAmount();
-			Product p = productDao.getProduct(i.getItemId());
+			Product p = productDao.getProduct(i.getProduct().getId());
 			p.setCount(p.getCount() - i.getQty());
 		}
 		o.setItems(items);
