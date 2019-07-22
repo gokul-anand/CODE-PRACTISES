@@ -2,19 +2,25 @@ package com.visa.prj.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * A user who can book hotels.
  */
+@Entity
 public class User implements Serializable {
 
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
+	
 	private String username;
 
     private boolean enabled;
+    @Id
     private String email;
     private String password;
     private String name;

@@ -5,18 +5,28 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * A hotel where users may book stays.
  */
+@Entity
 public class Hotel implements Serializable {
 
     /**
 	 * 
 	 */
 	private static final long serialVersionUID = 3749724822566325009L;
-
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "hotel_id")
 	private Long id;
 
+	@Column(name = "hotel_name")
     private String name;
 
     private String address;
