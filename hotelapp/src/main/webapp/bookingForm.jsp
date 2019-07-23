@@ -14,8 +14,8 @@
 <body>
 <h1>Booking details</h1>
 
-<form:form modelAttribute="booking" action="placeReservation.action"
-	method="get" cssClass="inline">
+<form:form modelAttribute="booking" action="placeReservation.do"
+	method="get" cssClass="inline" >
 	<span class="errors span-18"> <form:errors path="*" /> </span>
 	<table>
 	 <tr>
@@ -31,8 +31,8 @@
 	  	<fieldset>
 		<table>
 			<tr>
-				<td><label for="user.email">Email</label></td>
-				<td>${user.email}</td>
+				<td><label for="booking.user.email">Email</label></td>
+				<td>${booking.user.email}</td>
 			</tr>
 
 			<tr>
@@ -44,7 +44,8 @@
 				<td><form:input id="checkoutDate" path="checkoutDate" /></td>
 			</tr>
 			<form:hidden id="hotel.id" path="hotel.id" />
-			<tr>
+			<form:hidden  path="user.email"/>
+			<tr> 
 			</tr>
 			<tr>
 				<td colspan="2">

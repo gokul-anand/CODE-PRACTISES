@@ -32,7 +32,7 @@ Search</a></p>
 					<td>${hotel.address}</td>
 					<td>${hotel.city}, ${hotel.state}, ${hotel.country}</td>
 					<td>${hotel.zip}</td>
-					<td><a href="viewHotel.action?id=${hotel.id}">View Hotel</a></td>
+					<td><a href="viewHotel.do?id=${hotel.id}">View Hotel</a></td>
 				</tr>
 			</c:forEach>
 			<c:if test="${empty hotelList}">

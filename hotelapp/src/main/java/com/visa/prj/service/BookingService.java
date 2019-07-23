@@ -15,7 +15,7 @@ public class BookingService {
 	@Autowired
 	private BookingDao bookingDao;
 
-	public Hotel getHotelById(int id) {
+	public Hotel getHotelById(long id) {
 		return bookingDao.findHotelById(id);
 	}
 
