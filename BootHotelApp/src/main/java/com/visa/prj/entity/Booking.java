@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * A Hotel Booking made by a User.
  */
@@ -42,9 +44,11 @@ public class Booking implements Serializable {
 	private Hotel hotel;
 
 	@Column(name="check_in_date")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date checkinDate;
 
 	@Column(name="check_out_date")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date checkoutDate;
 
 	
